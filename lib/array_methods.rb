@@ -8,19 +8,9 @@ def find_element_index(array, value_to_find)
 end
 
 def find_max_value(array)
-  # index = 0
-  # maxValue = array[index]
-  # while index < array.length
-  #   if array[index+1] > maxValue
-  #     maxValue= array[index]
-  #   end
-  #   index++
-  # end
-  # return maxValue
-  
   index = 0
   maxValue = array[index]
-  while index > (array.length - 1)
+  while index < (array.length - 1)
     if array[index + 1] > maxValue
       maxValue = array[index + 1]
     end
@@ -30,5 +20,13 @@ def find_max_value(array)
 end
 
 def find_min_value(array)
-  # Add your solution here
+  index = 0
+  minValue = array[index]
+  while index < (array.length - 1)
+    if array[index + 1] < minValue
+      minValue = array[index + 1]
+    end
+    index++
+  end
+  return minValue
 end
